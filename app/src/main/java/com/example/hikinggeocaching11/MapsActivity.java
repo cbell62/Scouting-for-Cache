@@ -34,7 +34,6 @@ import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapLongClickListener
 {
-
     private GoogleMap mMap;
     private PendingIntent geofencePendingIntent;
     private GeofencingClient geofencingClient;
@@ -45,6 +44,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private List<Geofence> geofenceList = new ArrayList<>();
     private ArrayList<LatLng> courses = new ArrayList<LatLng>();
 
+    MainActivity mainActivity = new MainActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -78,6 +78,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMapLongClickListener(this);
 
         //populate courses w/ hardcoded values
+        int courseNum = mainActivity.getCourseNum();
         LatLng course1 = new LatLng(60.568192, -151.251642);
         courses.add(course1);
         LatLng course2 = new LatLng(60.559441, -151.270195);

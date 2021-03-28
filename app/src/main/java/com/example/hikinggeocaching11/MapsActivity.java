@@ -92,9 +92,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         int courseNumber = getIntent().getExtras().getInt("crNum");
         Log.d("keyVal:",""+courseNumber);
         LatLng course1 = new LatLng(60.568192, -151.251642);
-        courses.add(course1);
         LatLng course2 = new LatLng(60.559441, -151.270195);
+        LatLng course3 = new LatLng(60.560394, -151.270195);
+        LatLng course4 = new LatLng(60.557441, -151.271195);
+        LatLng course5 = new LatLng(60.559941, -151.270495);
+        courses.add(course1);
         courses.add(course2);
+        courses.add(course3);
+        courses.add(course4);
+        courses.add(course5);
+
         addGeofence(courses.get(courseNumber),GEOFENCE_RADIUS_DEFAULT);
         mMap.clear();
         addMarker(courses.get(courseNumber));

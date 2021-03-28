@@ -1,5 +1,6 @@
 package com.example.hikinggeocaching11;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.RadioButton;
@@ -10,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
    public RadioGroup hello;
    public RadioButton yeah;
-   public int courseNumber = 0;
+   public int courseNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,13 +36,19 @@ public class MainActivity extends AppCompatActivity {
 
     public int getCourseNum()
     {
-        return courseNumber;
+        return this.courseNumber;
 
     }
 
     private void switchActivities()
     {
-        Intent switchActivityIntent = new Intent(this, MapsActivity.class);
-        startActivity(switchActivityIntent);
+        // Create intent, create bundle which passes data to new activity, startActivity
+        //Intent switchActivityIntent = new Intent(this, MapsActivity.class);
+
+        // code
+        Intent mIntent = new Intent(this, MapsActivity.class);
+        mIntent.putExtra("crNum", 1);
+
+        startActivity(mIntent);
     }
 }

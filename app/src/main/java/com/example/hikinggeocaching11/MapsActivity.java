@@ -28,6 +28,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import android.content.Intent;
+import android.view.View;
+import android.widget.RadioGroup;
+import android.widget.RadioButton;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +52,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private List<Geofence> geofenceList = new ArrayList<>();
     private ArrayList<LatLng> courses = new ArrayList<LatLng>();
 
-    MainActivity mainActivity = new MainActivity();
+    // Retrieve bundle data from previous activity - only way to get it
+
+    //private String courseNumber = getIntent().getExtras().getString("key");
+    //private String courseNumber = getIntent();
+    //private int courseNumber2 = Integer.parseInt(courseNumber);
+    public Intent value = getIntent();
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -59,8 +75,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Initialize/create geofencing client
         geofencingClient = LocationServices.getGeofencingClient(this);
         geofencerHelper = new GeofencerHelper(this);
-
-
 
     }
 
@@ -78,7 +92,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMapLongClickListener(this);
 
         //populate courses w/ hardcoded values
-        int courseNum = mainActivity.getCourseNum();
+        Log.d("keyVal:",""+this.value);
         LatLng course1 = new LatLng(60.568192, -151.251642);
         courses.add(course1);
         LatLng course2 = new LatLng(60.559441, -151.270195);
@@ -213,6 +227,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         circleOptions.strokeWidth(4);
         mMap.addCircle(circleOptions);
     }
+
 
 
 

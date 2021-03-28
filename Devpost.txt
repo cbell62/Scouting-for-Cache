@@ -1,0 +1,26 @@
+## Inspiration
+To make orienteering and land navigation more fun by putting it into a game format where users can select courses based on their difficulty.  This app is closely related to geocaching which is a worldwide game of hide and seek with hidden constructed prizes at the end of the course. 
+
+## What it does
+Allows the user to choose a course based on difficulty.  The course lays out instructions including a starting point then the subsequent orienteering steps afterwards.  When the user reaches the end correctly the application will alert them and award them 1 scouting credit.
+
+## How we built it
+By using Google services, Google Maps, and several Geofencing implemnations we constructed Geofences on Maps which triggers when the user enters the designated area and awards them scouting credit points. 
+
+## Challenges we ran into
+First time using Android Studio for all of us.
+Difficulty of being able to implement even simple geofences in maps.
+Frontend design and data input. 
+Transitioning between functionality.
+
+## Accomplishments that we're proud of
+Having the core functionality working for geofences.
+
+## What we learned
+Quite a bit about Android Studio.
+That Geofencing is a powerful technology but requires extensive code for implementation.
+
+## What's next for Scouting4Cache
+Real life constructed courses.
+User Accounts.
+User created courses that are able to be reviewed.

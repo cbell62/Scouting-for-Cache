@@ -76,20 +76,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.346" />
 
-    <TextView
-        android:id="@+id/coursename1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotationY="37"
-        android:text="Course 1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
-
     <Button
         android:id="@+id/start"
         android:layout_width="226dp"
@@ -174,15 +160,34 @@
         android:id="@+id/header"
         android:layout_width="480dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="72dp"
         android:background="#2D9CDB"
         android:text="Courses"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:backgroundTint="#2D9CDB"
-        app:layout_constraintBottom_toTopOf="@+id/coursename1"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="121dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:background="#2D9CDB"
+        android:onClick="onClickButton2"
+        android:text="Course 1"
+        app:backgroundTint="#2D9CDB"
+        app:layout_constraintEnd_toStartOf="@+id/select"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

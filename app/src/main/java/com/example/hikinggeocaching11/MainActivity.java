@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //setContentView(R.layout.course1);
 
     }
 
@@ -31,13 +32,11 @@ public class MainActivity extends AppCompatActivity {
                 String.valueOf(courseNumber),Toast.LENGTH_SHORT ).show();
 
         switchActivities();
-
     }
 
-    public int getCourseNum()
+    public void onClickButton2(View v)
     {
-        return this.courseNumber;
-
+        switchActivitiesToCourse2();
     }
 
     private void switchActivities()
@@ -48,6 +47,17 @@ public class MainActivity extends AppCompatActivity {
         // code
         Intent mIntent = new Intent(this, MapsActivity.class);
         mIntent.putExtra("crNum", this.courseNumber);
+
+        startActivity(mIntent);
+    }
+
+    private void switchActivitiesToCourse2()
+    {
+        // Create intent, create bundle which passes data to new activity, startActivity
+        //Intent switchActivityIntent = new Intent(this, MapsActivity.class);
+
+        // code
+        Intent mIntent = new Intent(this, Course2Activity.class);
 
         startActivity(mIntent);
     }

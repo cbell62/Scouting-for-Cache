@@ -24,7 +24,8 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver
     { // when triggered make a toast
         // TODO: This method is called when the BroadcastReceiver is receiving
 
-        Toast.makeText(context, "Geofence triggered!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Course successfully completed +1 Scouting credits", Toast.LENGTH_SHORT).show();
+        // score = score += 1;
     }
 
 

@@ -57,9 +57,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     //private String courseNumber = getIntent().getExtras().getString("key");
     //private String courseNumber = getIntent();
     //private int courseNumber2 = Integer.parseInt(courseNumber);
-    public Intent value = getIntent();
-
-
 
 
     @Override
@@ -92,16 +89,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMapLongClickListener(this);
 
         //populate courses w/ hardcoded values
-        Log.d("keyVal:",""+this.value);
+        int courseNumber = getIntent().getExtras().getInt("crNum");
+        Log.d("keyVal:",""+courseNumber);
         LatLng course1 = new LatLng(60.568192, -151.251642);
         courses.add(course1);
         LatLng course2 = new LatLng(60.559441, -151.270195);
         courses.add(course2);
-        addGeofence(courses.get(1),GEOFENCE_RADIUS_DEFAULT);
+        addGeofence(courses.get(courseNumber),GEOFENCE_RADIUS_DEFAULT);
         mMap.clear();
-        addMarker(courses.get(1));
-        addCircle(courses.get(1), GEOFENCE_RADIUS_DEFAULT);
-        addGeofence(courses.get(1),GEOFENCE_RADIUS_DEFAULT);
+        addMarker(courses.get(courseNumber));
+        addCircle(courses.get(courseNumber), GEOFENCE_RADIUS_DEFAULT);
+        addGeofence(courses.get(courseNumber),GEOFENCE_RADIUS_DEFAULT);
     }
 
     private void enableUserLocation()

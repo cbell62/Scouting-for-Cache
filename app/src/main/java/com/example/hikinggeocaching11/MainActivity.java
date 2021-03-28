@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         hello =  (RadioGroup)findViewById(R.id.select);
         int selected_id = hello.getCheckedRadioButtonId();
         yeah = (RadioButton)findViewById(selected_id);
-        courseNumber = selected_id % 10;
+        this.courseNumber = selected_id % 10;
         Toast.makeText(MainActivity.this,
                 String.valueOf(courseNumber),Toast.LENGTH_SHORT ).show();
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         // code
         Intent mIntent = new Intent(this, MapsActivity.class);
-        mIntent.putExtra("crNum", 1);
+        mIntent.putExtra("crNum", this.courseNumber);
 
         startActivity(mIntent);
     }

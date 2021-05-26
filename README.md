@@ -1,3 +1,3 @@
-- **Jason Fomuke and Calista Bell's Project for HooHacks 2021 Hackathon**
+- **Jason Fomuke and Calista Bell's Project for HooHacks 2021 Hackathon (Mar 26 – 28, 2021)**
 - **Scouting4Cache is an Android GeoCaching application for Boy Scouts & Everyone**
 - **Demo, Description, and More: [Scouting4Cache](https://devpost.com/software/scouting4cache)**
